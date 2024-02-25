@@ -46,13 +46,29 @@ The heart attack prediction project is developed using Python programming langua
 
 6. **Healthcare Analytics and Proactive Intervention:** Recognized the importance of predictive analytics in healthcare for early detection and proactive intervention in preventing cardiovascular diseases.
 
-# INSIGHTS 🔍
+# INSIGHTS & OBSERVATIONS 🔍
 
-1. **Correlation among features:**
+1. **Correlation among features:** From the correlation matrix colourmap, it can be observed that there is a moderately strong negative correlation between the features exng & oldpeak and the possibility of a heart attack, and a moderately positive correlation between chest pain & the possibility of heart attack.
+
+![Correlation Colormap](https://github.com/HareRamaCh/Intel_OneAPI_Heart_Attack_Prediction/blob/main/Heart_Attack_Correlation.png)
+
+2. **Model Performance Variability:** Four supervised machine learning models were used, and each had differing accuracies. kNN had the highest accuracy, with 87%, which could be attribute to its localised decision making and robustness to noise. Decision trees, on the other hand, only had an accuracy of 79%, which could be attributed to its susceptibility to overfitting and lack of ensemble learning.
+
+3. **Intel OneAPI Optimization Impact**: Integration of Intel OneAPI and the sklearnex library has demonstrated notable improvements in computational efficiency and model performance. The optimized execution of machine learning algorithms has led to faster insights generation and enhanced predictive accuracy. The results are summarised in the table below: 
+
+|Classifier| Execution time Without Intel OneAPI  | Execution time with Intel OneAPI | Performance Increase
+|-------------| ------------- | ------------- | ------------- |
+|k-Nearest Neighbours| 16.6 ms ± 8.01 ms  | 5.29 ms ± 6.08 µs  | 213.8% |
+|Random Forest| 2.66 s ± 5.9 ms  | 1.67 s ± 280 ms | 59.28% |
+|Decision Tree| 4.98 ms ± 891 µs  | 3.55 ms ± 2.05 µs  | 40.28% |
+|Support Vector Machines| 7.21 ms ± 122 µs  | 5.61 ms ± 4.76 µs  | 28.52% |
+
 
 # INTEL ONEAPI INTEGRATION 🔵
 
 Intel OneAPI is a comprehensive suite of development tools and libraries designed to accelerate application performance across diverse hardware architectures. In the heart attack prediction project, Intel OneAPI was integrated, alongside the sklearnex package, to optimize machine learning model performance during training and inference. Intel OneAPI provides developers with optimized libraries, tools, and frameworks tailored for high-performance computing tasks. It offers a unified programming model that enables developers to write code that can seamlessly execute across various hardware architectures, including CPUs, GPUs, FPGAs, and AI accelerators.
+
+![Intel OneAPI Logo](https://www.hearne.software/Images/oneapi-logo-resized.aspx)
 
 The integration of Intel OneAPI and sklearnex in the heart attack prediction project offered several advantages:
 
